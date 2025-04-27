@@ -1,9 +1,12 @@
+// tailwind.config.js
 module.exports = {
-  content: [
-    './src/**/*.{html,js,jsx,ts,tsx}',  // Ensure Tailwind scans these files
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
-};
+}

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Custom styles */
+/* index.css */
 body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
+  @apply font-sans;
 }

@@ -1,5 +1,4 @@
 import ContactForm from '../components/ContactForm';
-//import LocationMap from '../components/LocationMap';
 
 export default function ContactPage() {
   const whatsappNumber = "8249292183";  // Replace with your WhatsApp business number
@@ -22,8 +21,11 @@ export default function ContactPage() {
         </a>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        <ContactForm />
+      {/* Grid Layout for Contact Form */}
+      <div className="flex justify-center">
+        <div className="w-full md:w-1/2">
+          <ContactForm />
+        </div>
       </div>
     </div>
   );
