@@ -14,128 +14,125 @@ const servicesData = [
   {
     icon: <FaSearch />,
     title: "Search Engine Optimization",
-    description: "Improve your search rankings with our data-driven SEO services.",
+    description: "Improve your rankings with smarter strategies.",
     link: "/services/seo",
   },
   {
     icon: <FaBullhorn />,
     title: "Social Media Marketing",
-    description: "Boost your brand’s presence with targeted social media strategies.",
+    description: "Connect, engage, and grow across platforms.",
     link: "/services/social-media-marketing",
   },
   {
     icon: <FaChartLine />,
     title: "Performance Marketing",
-    description: "Maximize ROI through performance-based marketing campaigns.",
+    description: "Target. Optimize. Convert. Repeat.",
     link: "/services/performance-marketing",
   },
   {
     icon: <FaPaintBrush />,
     title: "Branding & Design",
-    description: "We build legacies — from visual identity to impactful messaging.",
+    description: "Build a brand that stands apart.",
     link: "/services/branding-design",
   },
   {
     icon: <FaLaptopCode />,
-    title: "Website Design & Development",
-    description: "High-performance websites that are fast, sleek, and conversion-focused.",
+    title: "Website Development",
+    description: "Lightning-fast, responsive & bold websites.",
     link: "/services/website-development",
   },
   {
     icon: <FaPenNib />,
     title: "Content Marketing",
-    description: "Great content that converts — blogs, copies, scripts, and more.",
+    description: "Fuel your brand with compelling content.",
     link: "/services/content-marketing",
   },
   {
     icon: <FaVideo />,
-    title: "Video Production & Motion Graphics",
-    description: "Explainers, promos, reels — powerful visuals that tell your story.",
+    title: "Video & Motion Graphics",
+    description: "Visually engage. Emotionally connect.",
     link: "/services/video-production",
   },
   {
     icon: <FaLightbulb />,
-    title: "Digital Strategy & Consulting",
-    description: "Tailored digital strategies aligned to your business goals.",
+    title: "Digital Strategy",
+    description: "Data-driven plans tailored to you.",
     link: "/services/digital-strategy",
   },
 ];
 
 export default function ServicesSection() {
   const getVisibleCount = () => {
-    if (window.innerWidth < 640) return 1; // Mobile: 1
-    if (window.innerWidth < 1024) return 2; // Tablet: 2
-    return 3; // Desktop: 3
+    if (window.innerWidth < 640) return 1;
+    if (window.innerWidth < 1024) return 2;
+    return 3;
   };
 
   const [startIndex, setStartIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(getVisibleCount());
 
-  // Previous button handler
   const handlePrev = useCallback(() => {
     setStartIndex((prev) => Math.max(prev - visibleCount, 0));
   }, [visibleCount]);
 
-  // Next button handler
   const handleNext = useCallback(() => {
     if (startIndex + visibleCount < servicesData.length) {
       setStartIndex((prev) => prev + visibleCount);
     } else {
-      setStartIndex(0); // Loop back to the first set of services
+      setStartIndex(0);
     }
   }, [startIndex, visibleCount]);
 
-  // Update the number of visible items when resizing the window
   useEffect(() => {
     const handleResize = () => {
       setVisibleCount(getVisibleCount());
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Autoplay functionality
   useEffect(() => {
     const autoplayInterval = setInterval(() => {
       handleNext();
-    }, 5000); // Change every 5 seconds
+    }, 6000);
+    return () => clearInterval(autoplayInterval);
+  }, [startIndex, handleNext]);
 
-    return () => clearInterval(autoplayInterval); // Clear interval on component unmount
-  }, [startIndex, handleNext]); // Add handleNext to the dependency array
-
-  // Get the services to display based on the current index and visible count
   const visibleServices = servicesData.slice(startIndex, startIndex + visibleCount);
 
   return (
-    <section className="services-section py-20 bg-gray-900 text-center">
-
-
-<h2 className="text-4xl font-bold mb-12" style={{ color: 'white' }}>
-  Our Services
-</h2>
+    <section className="py-20 bg-black text-center">
+      <h2 className="text-4xl font-bold text-white mb-4">What We Do</h2>
+      <p className="text-gray-400 mb-10">
+        Powerful digital services. Unique strategies. Visible results.
+      </p>
 
       <div className="flex justify-center items-center gap-4 px-4">
-        {/* Previous Button */}
+        {/* Prev Button */}
         <button
           onClick={handlePrev}
+          className="text-white text-2xl hover:text-pink-500 transition disabled:opacity-30"
           disabled={startIndex === 0}
-          className="text-2xl text-gray-500 hover:text-gray-800 disabled:opacity-30"
         >
           ←
         </button>
 
-        {/* Services */}
+        {/* Cards */}
         <div className="flex gap-6 transition-all duration-300 overflow-hidden">
           {visibleServices.map((service, index) => (
             <div
               key={index}
-              className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[360px] flex-shrink-0 bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-6 text-left"
+              className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[360px] bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg hover:shadow-pink-500/30 transition-all duration-300 p-6 text-left hover:border-pink-500"
             >
-              <div className="text-blue-600 text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              <a href={service.link} className="inline-block text-blue-600 font-medium hover:text-blue-800">
+              <div className="text-white text-3xl mb-4 animate-pulse">
+                {service.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+              <p className="text-gray-300 mb-4">{service.description}</p>
+              <a
+                href={service.link}
+                className="inline-block mt-2 px-4 py-2 text-sm border border-pink-500 text-pink-400 rounded-full hover:bg-pink-500 hover:text-white transition-all"
+              >
                 Read More →
               </a>
             </div>
@@ -145,8 +142,8 @@ export default function ServicesSection() {
         {/* Next Button */}
         <button
           onClick={handleNext}
+          className="text-white text-2xl hover:text-pink-500 transition disabled:opacity-30"
           disabled={startIndex + visibleCount >= servicesData.length}
-          className="text-2xl text-gray-500 hover:text-gray-800 disabled:opacity-30"
         >
           →
         </button>
