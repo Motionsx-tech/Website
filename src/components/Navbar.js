@@ -16,11 +16,24 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex gap-6">
-          <Link to="/services" className="text-gray-700 font-semibold hover:text-blue-600 py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-110">Services</Link>
-          <Link to="/products" className="text-gray-700 font-semibold hover:text-blue-600 py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-110">Products</Link>
-          <Link to="/contact" className="text-gray-700 font-semibold hover:text-blue-600 py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-110">Contact</Link>
-          <Link to="/blog" className="text-gray-700 font-semibold hover:text-blue-600 py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-110">Blog</Link>
-          <Link to="/pricing" className="text-gray-700 font-semibold hover:text-blue-600 py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-110">Pricing</Link>
+          <Link to="/" className="text-gray-700 font-semibold hover:text-blue-600 py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-110">
+            Home
+          </Link>
+          <Link to="/services" className="text-gray-700 font-semibold hover:text-blue-600 py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-110">
+            Services
+          </Link>
+          <Link to="/products" className="text-gray-700 font-semibold hover:text-blue-600 py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-110">
+            Products
+          </Link>
+          <Link to="/contact" className="text-gray-700 font-semibold hover:text-blue-600 py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-110">
+            Contact
+          </Link>
+          <Link to="/blog" className="text-gray-700 font-semibold hover:text-blue-600 py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-110">
+            Blog
+          </Link>
+          <Link to="/pricing" className="text-gray-700 font-semibold hover:text-blue-600 py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-110">
+            Pricing
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -36,11 +49,24 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white bg-opacity-60 pb-4 px-4 flex flex-col gap-3 border-t border-gray-300 transition-all duration-300 ease-in-out transform translate-y-0 opacity-100 backdrop-blur-md">
-          <Link to="/services" className="py-2 text-gray-700 font-semibold hover:text-blue-600 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110">Services</Link>
-          <Link to="/products" className="py-2 text-gray-700 font-semibold hover:text-blue-600 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110">Products</Link>
-          <Link to="/contact" className="py-2 text-gray-700 font-semibold hover:text-blue-600 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110">Contact</Link>
-          <Link to="/blog" className="py-2 text-gray-700 font-semibold hover:text-blue-600 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110">Blog</Link>
-          <Link to="/pricing" className="py-2 text-gray-700 font-semibold hover:text-blue-600 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110">Pricing</Link>
+          <Link to="/" className="py-2 text-gray-700 font-semibold hover:text-blue-600 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110">
+            Home
+          </Link>
+          <Link to="/services" className="py-2 text-gray-700 font-semibold hover:text-blue-600 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110">
+            Services
+          </Link>
+          <Link to="/products" className="py-2 text-gray-700 font-semibold hover:text-blue-600 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110">
+            Products
+          </Link>
+          <Link to="/contact" className="py-2 text-gray-700 font-semibold hover:text-blue-600 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110">
+            Contact
+          </Link>
+          <Link to="/blog" className="py-2 text-gray-700 font-semibold hover:text-blue-600 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110">
+            Blog
+          </Link>
+          <Link to="/pricing" className="py-2 text-gray-700 font-semibold hover:text-blue-600 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110">
+            Pricing
+          </Link>
         </div>
       )}
     </nav>

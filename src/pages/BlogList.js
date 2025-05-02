@@ -25,6 +25,12 @@ const posts = [
     excerpt: "Learn how personalization and predictive analytics drive higher engagement and customer loyalty.",
     slug: "personalization-predictive-analytics",
   },
+  {
+    id: 5,
+    title: "How a Website Can Boost Your Digital Marketing Strategy and Strengthen Your Online Brand Presence",
+    excerpt: "Discover how your website can become the foundation of your digital marketing strategy and online presence.",
+    slug: "website-boost-digital-marketing",
+  },
 ];
 
 export default function BlogList() {

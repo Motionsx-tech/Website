@@ -29,6 +29,13 @@ const blogData = [
       "Personalization is no longer a luxury; it is an expectation. Businesses that understand user behavior and deliver relevant content enjoy significantly higher engagement rates. Our approach integrates.",
     image: "https://cdn.pixabay.com/photo/2022/04/04/16/41/technology-7111798_1280.jpg",
     link: "/blog/personalization-predictive-analytics"
+  },
+  {
+    title: "How a Website Can Boost Your Digital Marketing Strategy",
+    description:
+      "Discover how a well-designed website enhances your digital marketing efforts, builds credibility, and strengthens your brand presence online.",
+    image: "https://cdn.pixabay.com/photo/2019/03/01/17/49/speed-4028234_1280.jpg",
+    link: "/blog/website-boost-digital-marketing"
   }
 ];
 
@@ -38,7 +45,6 @@ export default function BlogSection() {
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Latest Blog Posts</h2>
 
-        {/* Grid Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogData.map((blog, index) => (
             <div

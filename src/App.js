@@ -33,6 +33,7 @@ import SeoSkyrocketBusiness from "./pages/posts/SeoSkyrocketBusiness";
 import IntegrationOfDigitalMarketing from "./pages/posts/IntegrationOfDigitalMarketing";
 import RoleOfSeo from "./pages/posts/RoleOfSeo";
 import PersonalizationAndPredictiveAnalytics from "./pages/posts/PersonalizationAndPredictiveAnalytics";
+import WebsiteAndDigitalMarketing from "./pages/posts/WebsiteAndDigitalMarketing";
 //Pricing
 import PricingPage from "./pages/PricingPage"; 
 // Importing the logo
@@ -55,13 +56,9 @@ export default function App() {
             <ServicesSection />
             <ProductsSection />
             <BlogSection />
-            <section className="products-section py-20 bg-gray-100">
-              {/* You can add other content for this section here */}
-            </section>
+            
             <TestimonialsSection />
-            <section className="contact-section py-20 bg-white">
-              <h2 className="text-4xl font-bold text-center mb-10">Get in Touch</h2>
-              <p className="text-xl text-center mb-4">We'd love to hear from you!</p>
+            <section>
               <ContactPage />
             </section>
           </div>
@@ -93,6 +90,7 @@ export default function App() {
         <Route path="/blog/integration-digital-marketing-life" element={<IntegrationOfDigitalMarketing />} />
         <Route path="/blog/role-of-seo-being-present" element={<RoleOfSeo />} />
         <Route path="/blog/personalization-predictive-analytics" element={<PersonalizationAndPredictiveAnalytics />} />
+        <Route path="/blog/website-boost-digital-marketing" element={<WebsiteAndDigitalMarketing />} />
         {/*Pricing*/}
         <Route path="/pricing" element={<PricingPage />} />
 
