@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+ import bg2 from '../bg2.svg'
 export default function HeroSection() {
   const [bgImage, setBgImage] = useState("");
 
@@ -7,12 +8,12 @@ export default function HeroSection() {
     <section
       className="hero-section min-h-screen flex flex-col justify-center items-center text-center text-white relative font-sans"
       style={{
-        backgroundColor: "#FFF176",
-        backgroundImage: bgImage ? `url(${bgImage})` : "none",
+        backgroundImage: `url(${bgImage || bg2})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         height: "100vh",
+        transition: "background-image 0.5s ease-in-out",
       }}
     >
       {/* Dark Overlay */}
@@ -30,8 +31,7 @@ export default function HeroSection() {
             }
             onMouseLeave={() => setBgImage("")}
           >
-            Motions
-            <span className="text-pink-500">X</span>
+            Motions<span className="text-pink-500">X</span>
           </span>
         </h1>
 
