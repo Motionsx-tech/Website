@@ -5,21 +5,21 @@ export default function HeroSection() {
 
   return (
     <section
-      className="hero-section min-h-screen flex flex-col justify-center items-center text-center text-white relative"
+      className="hero-section min-h-screen flex flex-col justify-center items-center text-center text-white relative font-sans"
       style={{
-        backgroundColor: "#FFF176", // Solid background color
+        backgroundColor: "#FFF176",
         backgroundImage: bgImage ? `url(${bgImage})` : "none",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        height: "100vh", // Ensures the hero section takes up the full height of the viewport
+        height: "100vh",
       }}
     >
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/30 transition-colors duration-500"></div>
 
       <div className="relative z-10 max-w-4xl px-6 py-8">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight font-[Poppins] tracking-wide">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-wide font-montserrat">
           Welcome to{" "}
           <span
             className="text-black hover:bg-[#FFC107] hover:text-white font-bold transition-all duration-300 cursor-pointer px-1 py-1"
@@ -35,8 +35,8 @@ export default function HeroSection() {
           </span>
         </h1>
 
-        <p className="text-lg md:text-2xl mb-8 text-gray-200 font-[Poppins] font-light tracking-normal leading-relaxed">
-          Unlock your brand’s full potential with our{" "}
+        <p className="text-lg md:text-2xl mb-8 text-gray-200 font-light tracking-normal leading-relaxed font-montserrat">
+          Drive traffic and climb rankings with our proven{" "}
           <span
             className="inline-block text-[#FFC107] font-bold transition-all duration-300 cursor-pointer hover:bg-[#FF5722] hover:text-white px-2 py-1 rounded"
             onMouseEnter={() =>
@@ -46,7 +46,7 @@ export default function HeroSection() {
             }
             onMouseLeave={() => setBgImage("")}
           >
-            SEO
+            traffic
           </span>{" "}
           and{" "}
           <span
@@ -58,9 +58,9 @@ export default function HeroSection() {
             }
             onMouseLeave={() => setBgImage("")}
           >
-            Digital marketing
+            rankings
           </span>{" "}
-          expertise. From skyrocketing{" "}
+          with our proven{" "}
           <span
             className="inline-block text-[#FFC107] font-bold transition-all duration-300 cursor-pointer hover:bg-[#FF5722] hover:text-white px-2 py-1 rounded"
             onMouseEnter={() =>
@@ -70,9 +70,9 @@ export default function HeroSection() {
             }
             onMouseLeave={() => setBgImage("")}
           >
-            SERP rankings
-          </span>{" "}
-          to unstoppable web traffic, we help your business thrive online.
+            digital strategies
+          </span>
+          .
         </p>
 
         <a

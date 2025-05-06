@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles */
-/* index.css */
-body {
-  @apply font-sans;
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    @apply font-sans;
+  }
 }
