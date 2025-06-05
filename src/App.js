@@ -27,6 +27,8 @@ import IVRSystem from "./pages/productpage/IVRSystem";
 import HRMS from "./pages/productpage/HRMS";
 import CRM from "./pages/productpage/CRM";
 import CloudSuite from "./pages/productpage/CloudSuite";
+import SmartXalgo from "./pages/productpage/SmartXalgo";
+
 // Blog Components
 import BlogList from "./pages/BlogList";
 import SeoSkyrocketBusiness from "./pages/posts/SeoSkyrocketBusiness";
@@ -70,6 +72,7 @@ export default function App() {
         <Route path="/products/hrms"element={<HRMS />} />  
         <Route path="/products/crm"element={<CRM />} />
         <Route path="/products/cloud-suite"element={<CloudSuite />} />
+        <Route path="/products/smartxalgo"element={<SmartXalgo />} />
         {/* Service Pages */}
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/seo" element={<SEO />} />

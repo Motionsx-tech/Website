@@ -1,24 +1,34 @@
 import { useState, useEffect, useCallback } from "react";
-import { FaPhoneAlt, FaUsers, FaHandshake } from "react-icons/fa";
+import { FaPhoneAlt, FaUsers, FaHandshake, FaRobot } from "react-icons/fa"; // Added FaRobot for SmartXalgo
 
 const productsData = [
   {
     icon: <FaPhoneAlt />,
     title: "IVR System",
-    description: "Automate, answer, and act faster with intelligent voice routing. Set up multilevel IVR, forward calls, log activity and more.",
+    description:
+      "Automate, answer, and act faster with intelligent voice routing. Set up multilevel IVR, forward calls, log activity and more.",
     link: "/products/ivr-system",
   },
   {
     icon: <FaUsers />,
     title: "HRMS",
-    description: "Smart HR tools for smarter teams. Handle onboarding, attendance, payroll, performance reviews — all in one place.",
+    description:
+      "Smart HR tools for smarter teams. Handle onboarding, attendance, payroll, performance reviews — all in one place.",
     link: "/products/hrms",
   },
   {
     icon: <FaHandshake />,
     title: "CRM",
-    description: "Track leads, manage pipelines, and close deals with ease. Your all-in-one sales and customer relationship management system.",
+    description:
+      "Track leads, manage pipelines, and close deals with ease. Your all-in-one sales and customer relationship management system.",
     link: "/products/crm",
+  },
+  {
+    icon: <FaRobot />, // Placeholder icon for SmartXalgo — you can replace this
+    title: "SmartXalgo",
+    description:
+      "Next-Gen Algorithmic Trading Platform leveraging AI, real-time market analysis, and institutional tools.",
+    link: "/products/smartxalgo",
   },
 ];
 
@@ -85,9 +95,7 @@ export default function ProductsSection() {
               key={index}
               className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[360px] bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg hover:shadow-pink-500/30 transition-all duration-300 p-6 text-left hover:border-pink-500"
             >
-              <div className="text-white text-3xl mb-4 animate-pulse">
-                {product.icon}
-              </div>
+              <div className="text-white text-3xl mb-4 animate-pulse">{product.icon}</div>
               <h3 className="text-xl font-semibold text-white mb-2">{product.title}</h3>
               <p className="text-gray-300 mb-4">{product.description}</p>
               <a

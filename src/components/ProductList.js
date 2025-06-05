@@ -36,24 +36,41 @@ const products = [
       "Customer Support Integration"
     ],
     link: "/products/crm"
+  },
+  {
+    title: "SmartXalgo – Next-Gen Algorithmic Trading Platform",
+    description: "Harness the power of advanced AI algorithms, real-time market analysis, and institutional-grade tools to transform your trading performance and achieve consistent profitability.",
+    icon: "🤖",
+    subservices: [
+      "Advanced AI Algorithms",
+      "Real-time Market Analysis",
+      "Institutional-grade Tools",
+      "Consistent Profitability"
+    ],
+    link: "/products/smartxalgo"
   }
-  
 ];
 
 export default function ProductList() {
   return (
     <div className="container mx-auto p-6">
-      {/* Add the "Our Products" title here */}
       <h2 className="text-3xl font-bold text-center mb-8">Our Products</h2>
 
-      {/* Align grid and spacing like Service List */}
       <div className="grid md:grid-cols-3 gap-8">
         {products.map((product, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+          <div
+            key={index}
+            className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
+          >
             <div className="text-4xl mb-4 text-center">{product.icon}</div>
             <h3 className="text-xl font-semibold text-center mb-2">{product.title}</h3>
             <p className="mt-2 text-gray-700">{product.description.substring(0, 200)}...</p>
-            <Link to={product.link} className="mt-4 block text-blue-600 hover:text-blue-800 text-center">Read More</Link>
+            <Link
+              to={product.link}
+              className="mt-4 block text-blue-600 hover:text-blue-800 text-center"
+            >
+              Read More
+            </Link>
           </div>
         ))}
       </div>

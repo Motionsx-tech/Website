@@ -138,6 +138,12 @@ export default function Navbar() {
                   >
                     CRM
                   </Link>
+                  <Link
+                    to="/products/smartxalgo"
+                    className="px-4 py-2 text-sm text-gray-800 rounded-lg hover:bg-white/40 hover:scale-105 transition-all duration-200 ease-in-out font-semibold"
+                    >
+                      SmartXalgo
+                      </Link>
                 </div>
               </div>
             )}
