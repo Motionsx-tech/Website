@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import logo from '../assets/logo.png';
+import { FcGallery } from 'react-icons/fc';
+
 
 // Import icons from react-icons
 import { FcHome, FcServices, FcPackage, FcPhone, FcNews, FcCurrencyExchange } from 'react-icons/fc';
@@ -148,6 +150,15 @@ export default function Navbar() {
               </div>
             )}
           </div>
+          <Link
+  to="/services/drone-service"
+  className="relative text-gray-700 font-semibold hover:text-blue-600 py-2 px-4 rounded-md transition-all duration-300 ease-in-out flex flex-col items-center group"
+>
+  <span className="w-6 h-6 mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <FcGallery className="w-6 h-6" />
+  </span>
+  MotionsxSkyOps
+</Link>
 
           <Link
             to="/contact"
@@ -214,6 +225,14 @@ export default function Navbar() {
             <FcPackage className="w-6 h-6 inline-block mr-1" />
             Products
           </Link>
+          <Link
+  to="/services/drone-service"
+  className="py-2 text-gray-700 font-semibold hover:text-blue-600 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110"
+>
+  <FcGallery className="w-6 h-6 inline-block mr-1" />
+  MotionsxSkyOps
+</Link>
+
           <Link
             to="/contact"
             className="py-2 text-gray-700 font-semibold hover:text-blue-600 px-4 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110"

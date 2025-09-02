@@ -11,6 +11,10 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import TawkToChat from "./components/TawkToChat";
 import ScrollToTop from "./components/ScrollToTop";
 import ProductsSection from "./components/ProductsSection";
+import About from "./pages/About";
+import Gallery from "./pages/Gallery";
+import AboutDroneSection from "./components/dronesection";
+
 
 // Services Pages
 import SEO from "./pages/servicepage/Seo";
@@ -21,6 +25,7 @@ import WebsiteDesignDevelopment from "./pages/servicepage/WebsiteDesignDevelopme
 import ContentMarketing from "./pages/servicepage/ContentMarketing";
 import VideoProductionMotionGraphics from "./pages/servicepage/VideoProductionMotionGraphics";
 import DigitalStrategyConsulting from "./pages/servicepage/DigitalStrategyConsulting";
+import DroneService from "./pages/servicepage/DroneService";
 
 // Product Pages
 import IVRSystem from "./pages/productpage/IVRSystem";
@@ -55,6 +60,7 @@ export default function App() {
         <Route path="/" element={
           <div>
             <HeroSection />
+            <AboutDroneSection />
             <ServicesSection />
             <ProductsSection />
             <BlogSection />
@@ -65,6 +71,11 @@ export default function App() {
             </section>
           </div>
         } />
+        {/* About Page ✅ NEW */}
+        <Route path="/about" element={<About />} />
+
+        {/* Gallary Page*/}
+        <Route path="/gallery" element={<Gallery />} />
 
         {/* Product Page Route */}
         <Route path="/products" element={<ProductList />} />
@@ -83,6 +94,7 @@ export default function App() {
         <Route path="/services/content-marketing" element={<ContentMarketing />} />
         <Route path="/services/video-production" element={<VideoProductionMotionGraphics />} />
         <Route path="/services/digital-strategy" element={<DigitalStrategyConsulting />} />
+        <Route path="/services/drone-service" element={<DroneService />} />
         
         {/* Contact Page Route */}
         <Route path="/contact" element={<ContactPage />} />
